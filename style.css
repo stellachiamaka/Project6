@@ -1,0 +1,326 @@
+@import url(https://fonts.google.com/specimen/Rubik);
+*{
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:  hsl(270, 20%, 96%);
+    font-size: 16px;
+    font-family: 'Rubik', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    display: grid;
+    place-items: center;
+    min-height: 80vh;
+
+}
+
+
+.wrapper{
+    border: 12px solid #fff;
+    width: 350px;
+    height: 635px;
+    margin-left: -40px;
+    margin-top: 20px;
+    border-radius: 32px;
+    box-shadow: 0 10px 20px hsl(206, 6%, 79%);
+    position: relative;
+
+}
+.header{
+    height: 90px;
+    background: linear-gradient(to right, hsl(264, 100%, 61%),  hsl(293, 100%, 63%) );
+    border-radius: 20px 20px 10px 10px;
+}
+.header::before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 70px;
+    width: 200px;
+    height: 26px;
+    background-color: #fff;
+    border-radius: 0px 0px 16px 16px;
+
+}
+.dec{
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 40px 20px;
+}
+.chevron{
+    position: relative;
+    margin-top: 0px;
+    margin-right: 15px;
+    opacity: 0.7;
+}
+.chevron::before{
+    content: '';
+    position: absolute;
+    top:-8px;
+    width: 3px;
+    height: 9px;
+    left: 0px;
+    background-color: #fff;
+    transform: skew(-28deg, 0deg);
+}
+.chevron::after{
+    content: '';
+    position: absolute;
+    top:0px;
+    width: 3px;
+    height: 9px;
+    left: 0px;
+    background-color: #fff;
+    transform: skew(28deg, 0deg);
+}
+
+.avatar img{
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    border: 2px solid #fff;
+    margin-right: 10px;
+    margin-top: 3px;
+}
+.name{
+    color: hsla(0, 0%, 100%, 0.8);
+    margin-bottom: 2px;
+    font-weight: 700;
+    font-size: 18px;
+
+}
+.desc{
+    color: hsla(0, 0%, 100%, 0.5);
+    font-size: 14px;
+    
+}
+.dot{
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 50%;
+    margin-left: 280px;
+}
+.dot::before{
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 50%;
+    left: 0px;
+    top: -6px;
+}
+.dot::after{
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 50%;
+    left: 0px;
+    top: 6px;
+}
+.message{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px 10px 20px 20px;
+    padding: 10px 5px 10px;
+    background-color: hsl(270, 20%, 96%);
+
+}
+.text-reply{
+    background-color: hsla(206, 6%, 79%, 0.3);
+    max-width: 60%;
+    border-radius: 15px;
+    margin-bottom: 8px;
+    padding: 8px 10px 8px 12px;
+    font-size: 11.5px;
+    color: hsl(276, 55%, 52%);
+    border-bottom-left-radius: 0px;
+    margin-left: 4px;
+    font-weight: 600;
+}
+.pics{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.pics img{
+    width: 72px;
+    border-radius: 25%;
+    padding: 5px 7px;
+    cursor: pointer;
+}
+.text-user{
+    background-color:  hsl(0, 0%, 100%);
+    display: flex;
+    align-items: flex-end;
+    max-width: 60%;
+    width: fit-content;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 12px;
+    color:  hsl(271, 15%, 43%);
+    border-bottom-right-radius: 0px;
+    margin-left: auto;
+    font-weight: 600;
+    margin-top: 7px;
+    margin-right: 5px;
+    margin-bottom: 7px;
+}
+.offer{
+    max-width: 75%;
+    height: 44px;
+    border-radius: 15px;
+    background: linear-gradient(to right,  hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    border-bottom-left-radius: 0px;
+    padding: 2px 25px 2px 13px;
+    color: #fff;
+    justify-content: space-between;
+    align-items: center;
+    display: inline-flex;
+    margin-left: 4px;
+    margin-bottom: 8px;
+    
+
+}
+.offer div{
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    opacity: 0.4;
+}
+.offer p{
+    margin-left: -12px;
+    opacity: 0.8;
+    font-size: 15px;
+}
+.offer span{
+    font-weight: 700;
+    font-size: 20px;
+    opacity: 0.9;
+}
+.offer .hour{
+    margin-left: -30px;
+}
+form{
+    display: inline-flex;
+    margin-top: 5px;
+}
+input{
+    width: 310px;
+    border-radius: 25px;
+    padding: 18px 25px 15px;
+    border: 1px solid #fff;
+    opacity: 0.7;
+}
+input:focus{
+    outline: none;
+}
+.arrow{
+    font-size: 24px;
+    color: #fff;
+    background-color: hsl(271, 36%, 24%);
+    border-radius: 50%;
+    padding: 3px 10px;
+    height: 32px;
+    margin-left: -47px;
+    margin-top: 7px;
+    opacity: 0.9;
+    cursor: progress;
+
+}
+
+.title{
+    line-height: 25px ;
+}
+.title h1{
+    color: hsl(271, 36%, 24%);
+    margin-left: 220px;
+
+}
+.title p{
+    margin-left:220px;
+    margin-top: 40px;
+    font-size: 17px;
+    color:   hsl(271, 36%, 24%);
+    opacity: 0.6;
+}
+.svg{
+    background:  linear-gradient(to top, hsl(264, 100%, 61%),  hsl(293, 100%, 63%) );
+    width: 450px;
+    height: 1000px;
+    margin-left: -320px;
+    margin-top: -500px;
+   padding: 0px;
+   border-bottom-right-radius: 300px;
+   border-bottom-left-radius: 300px;
+   position:static;
+   
+}
+.svg2{
+   background-color:  hsla(293, 100%, 63%, 0.03);
+    width: 253px;
+    height: 610px;
+    /* margin-left: 1000px; */
+    margin-top: 110px;
+    margin-right: -170px;
+   border-top-right-radius: 0px;
+   border-top-left-radius: 4500px;
+   /* padding-left: 100px; */
+   
+}
+@media screen and (max-width:768px) {
+    body{
+       flex-direction: column;
+       width: 400px;
+    }
+    .svg{
+        margin-right: 100px;    }
+   .title{
+    margin-left: -100px;
+    margin-top: -300px;
+    text-align: center;
+   }
+   .header::before{
+    margin-left: -30px;
+   }
+   .wrapper{
+    width: 300px;
+    margin-top: -800px ;
+    margin-left: 80px;
+   }
+   .dot{
+    margin-left: 230px;
+   }
+   .title p{
+    font-size: 17px;
+    font-weight: 400;
+    margin-top: 20px;
+   }
+   .title h1{
+    font-size: 35px;
+   }
+
+   form{
+    margin-top: -1px;
+    height: 25px;
+   }
+   .arrow{
+    margin-top: -1px;
+   }
+   .svg2{
+    margin-top: -500px;
+    margin-left: 140px;
+    height: 500px;
+   }
+}
